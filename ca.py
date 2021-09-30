@@ -12,11 +12,12 @@ while True:
     # Impossible->  12
     difficulty = 2
 
-    # Window size
+    # Window size For The Windows
+
     frame_size_x = 720
     frame_size_y = 480
 
-    # Checks for errors encountered
+    # Checks for errors encountered Ok
     check_errors = pygame.init()
     # pygame.init() example output -> (6, 0)
     # second number in tuple gives number of errors
@@ -30,7 +31,7 @@ while True:
     pygame.display.set_caption('Snake Eater')
     game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
-    # Colors (R, G, B)
+    # Colors (R, G, B) Here
     black = pygame.Color(0, 0, 0)
     white = pygame.Color(255, 255, 255)
     red = pygame.Color(255, 0, 0)
@@ -40,7 +41,7 @@ while True:
     # FPS (frames per second) controller
     fps_controller = pygame.time.Clock()
 
-    # Game variables
+    # Game variables Here
     snake_pos = [100, 50]
     snake_body = [[100, 50], [100 - 10, 50], [100 - (2 * 10), 50]]
 
@@ -53,7 +54,7 @@ while True:
     score = 0
 
 
-    # Game Over
+    # Game Over Here
     def game_over():
         my_font = pygame.font.SysFont('times new roman', 90)
         game_over_surface = my_font.render('YOU DIED', True, red)
@@ -68,7 +69,7 @@ while True:
         sys.exit()
 
 
-    # Score
+    # Score Abouts
     def show_score(choice, color, font, size):
         score_font = pygame.font.SysFont(font, size)
         score_surface = score_font.render('Score : ' + str(score), True, color)
@@ -81,13 +82,13 @@ while True:
         # pygame.display.flip()
 
 
-    # Main logic
+    # Main logic Start Here
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-            # Whenever a key is pressed down
+            # Whenever a key is pressed down It Will Do Some Action For You
             elif event.type == pygame.KEYDOWN:
                 # W -> Up; S -> Down; A -> Left; D -> Right
                 if event.key == pygame.K_UP or event.key == ord('w'):
@@ -102,7 +103,7 @@ while True:
                 if event.key == pygame.K_ESCAPE:
                     pygame.event.post(pygame.event.Event(pygame.QUIT))
 
-        # Making sure the snake cannot move in the opposite direction instantaneously
+        # Making sure the snake cannot move in the opposite direction instantaneously Do You Understand
         if change_to == 'UP' and direction != 'DOWN':
             direction = 'UP'
         if change_to == 'DOWN' and direction != 'UP':
@@ -112,7 +113,7 @@ while True:
         if change_to == 'RIGHT' and direction != 'LEFT':
             direction = 'RIGHT'
 
-        # Moving the snake
+        # Moving the snake In This Game
         if direction == 'UP':
             snake_pos[1] -= 10
         if direction == 'DOWN':
@@ -135,7 +136,7 @@ while True:
             food_pos = [random.randrange(1, (frame_size_x // 10)) * 10, random.randrange(1, (frame_size_y // 10)) * 10]
         food_spawn = True
 
-        # GFX
+        # GFX For This Programme
         game_window.fill(black)
         for pos in snake_body:
             # Snake body
