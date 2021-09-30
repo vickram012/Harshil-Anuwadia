@@ -2,12 +2,12 @@ while True:
     import pygame, sys, time, random
 
     # Difficulty settings
-    # Easy      ->  10
-    # Medium    ->  25
-    # Hard      ->  40
-    # Harder    ->  60
-    # Impossible->  120
-    difficulty = 25
+    # Easy      ->  1
+    # Medium    ->  2
+    # Hard      ->  4
+    # Harder    ->  6
+    # Impossible->  12
+    difficulty = 2
 
     # Window size
     frame_size_x = 720
