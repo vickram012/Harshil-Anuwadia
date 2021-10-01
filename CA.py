@@ -1,8 +1,5 @@
 while True:
-    import pygame
-    import sys
-    import time
-    import random
+    import pygame,sys,time,random
 
     # Difficulty settings
     # Easy      ->  100
