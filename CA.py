@@ -5,11 +5,11 @@ while True:
     import random
 
     # Difficulty settings
-    # Easy      ->  1
-    # Medium    ->  2
-    # Hard      ->  4
-    # Harder    ->  6
-    # Impossible->  12
+    # Easy      ->  100
+    # Medium    ->  2494
+    # Hard      ->  585
+    # Harder    ->  6474
+    # Impossible->  125494 ok
     difficulty = 2
 
     # Window size For The Windows
